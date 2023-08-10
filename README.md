@@ -1,6 +1,6 @@
 # example-postgresql [![Build Status](https://dev.azure.com/lganzzzo/lganzzzo/_apis/build/status/oatpp.example-postgresql?branchName=master)](https://dev.azure.com/lganzzzo/lganzzzo/_build/latest?definitionId=17&branchName=master)
 
-A complete example of a "CRUD" service (UserService) built with Oat++ and using oatpp ORM with PostgreSQL.
+A complete example of a "CRUD" service (PasteService) built with Oat++ and using oatpp ORM with PostgreSQL.
 
 
 In this example:
@@ -32,7 +32,7 @@ This project is using the following oatpp modules:
 |    |- controller/                      // Folder containing Controller where all endpoints are declared
 |    |- db/                              // Folder containing the database client
 |    |- dto/                             // DTOs are declared here
-|    |- service/                         // Service business logic classes (UserService)
+|    |- service/                         // Service business logic classes (PasteService)
 |    |- ServiceComponent.hpp             // Service configuration (port, ObjectMapper, Database)
 |    |- SwaggerComponent.hpp             // Configuration for swagger-ui
 |    |- AppComponent.hpp                 // Service configuration is loaded here
