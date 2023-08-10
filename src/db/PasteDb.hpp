@@ -29,7 +29,7 @@ public:
 
   QUERY(createPaste,
         "INSERT INTO pastes (content) VALUES(:content) RETURNING "
-        "code, token::text AS token;",
+        "code, token;",
         PREPARE(true), PARAM(oatpp::String, content));
 
   QUERY(updatePaste, "UPDATE pastes SET content=:content WHERE token=:token;",
