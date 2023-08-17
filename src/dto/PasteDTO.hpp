@@ -6,16 +6,6 @@
 
 #include OATPP_CODEGEN_BEGIN(DTO)
 
-class PasteDTO : public oatpp::DTO {
-
-  DTO_INIT(PasteDTO, DTO)
-
-  DTO_FIELD(Int32, id);
-  DTO_FIELD(String, code, "code");
-  DTO_FIELD(String, content, "content");
-  DTO_FIELD(String, token, "token");
-};
-
 class PostPasteDTO : public oatpp::DTO {
   DTO_INIT(PostPasteDTO, DTO)
 
