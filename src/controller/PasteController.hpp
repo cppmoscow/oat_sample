@@ -34,18 +34,18 @@ public:
   }
 
   ENDPOINT("GET", "pastes", getPaste, QUERY(String, code)) {
-    return createDtoResponse(Status::CODE_200, m_userService.getPaste(code));
+    return createResponse(Status::CODE_200, m_userService.getPaste(code));
   }
 
   ENDPOINT("PUT", "pastes", updatePaste, QUERY(String, token),
            BODY_STRING(String, content)) {
-    return createDtoResponse(Status::CODE_200,
-                             m_userService.updatePaste(token, content));
+    m_userService.updatePaste(token, content);
+    return createResponse(Status::CODE_200);
   }
 
   ENDPOINT("DELETE", "pastes", deletePaste, QUERY(String, token)) {
-    return createDtoResponse(Status::CODE_200,
-                             m_userService.deletePaste(token));
+    m_userService.deletePaste(token);
+    return createResponse(Status::CODE_200);
   }
 };
 

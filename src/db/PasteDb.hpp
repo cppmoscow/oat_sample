@@ -32,12 +32,13 @@ public:
         "code, token;",
         PREPARE(true), PARAM(oatpp::String, content));
 
-  QUERY(updatePaste, "UPDATE pastes SET content=:content WHERE token=:token;",
+  QUERY(updatePaste,
+        "UPDATE pastes SET content=:content WHERE token=:token RETURNING id;",
         PREPARE(true), PARAM(oatpp::String, token),
         PARAM(oatpp::String, content));
 
-  QUERY(deletePaste, "DELETE FROM pastes WHERE token=:token", PREPARE(true),
-        PARAM(oatpp::String, token));
+  QUERY(deletePaste, "DELETE FROM pastes WHERE token=:token RETURNING id;",
+        PREPARE(true), PARAM(oatpp::String, token));
 };
 
 #include OATPP_CODEGEN_END(DbClient) //<- End Codegen

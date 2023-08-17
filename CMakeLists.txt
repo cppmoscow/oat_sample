@@ -10,7 +10,6 @@ add_library(${project_name}-lib
         src/controller/PasteController.hpp
         src/db/PasteDb.hpp
         src/dto/ConfigDto.hpp
-        src/dto/StatusDto.hpp
         src/dto/PasteDTO.hpp
         src/service/PasteService.cpp
         src/service/PasteService.hpp
