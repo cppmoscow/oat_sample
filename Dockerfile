@@ -25,11 +25,13 @@ RUN ln -sf /usr/bin/clang /usr/bin/cc \
 
 RUN apk add postgresql-dev
 
-ADD . /service
+ADD utility /service/utility
 
 WORKDIR /service/utility
 
 RUN ./install-oatpp-modules.sh
+
+ADD . /service
 
 WORKDIR /service/build
 

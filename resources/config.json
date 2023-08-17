@@ -1,12 +1,12 @@
 {
   "dev": {
     "host": "0.0.0.0",
-    "port": 8000,
-    "dbConnectionString": "postgresql://postgres:db-pass@localhost:5432/postgres"
+    "port": 8080,
+    "dbConnectionString": "postgresql://pastebin:pastebin@localhost:5432/pastebin"
   },
   "local-docker": {
     "host": "0.0.0.0",
-    "port": 8000,
-    "dbConnectionString": "postgresql://postgres:db-pass@db:5432/postgres"
+    "port": 8080,
+    "dbConnectionString": "postgresql://pastebin:pastebin@pastebin-oat-database:5432/pastebin"
   }
 }
