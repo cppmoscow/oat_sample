@@ -38,9 +38,9 @@ $$ LANGUAGE plpgsql strict immutable;
 
 CREATE TABLE IF NOT EXISTS pastes (
     id SERIAL PRIMARY KEY,
-    code VARCHAR,
-    content VARCHAR,
-    token VARCHAR DEFAULT(gen_random_uuid()::text)
+    code VARCHAR NOT NULL,
+    content VARCHAR NOT NULL,
+    token VARCHAR NOT NULL DEFAULT(gen_random_uuid()::text)
 );
 
 create or replace function insert_pastes_code() returns trigger as $$
